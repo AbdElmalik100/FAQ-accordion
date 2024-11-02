@@ -13,7 +13,7 @@ const Accordion = () => {
                 accordionContent.map((item, index) => (
                     <div key={index} className='accordion-item py-4 [&:not(:first-child)]:border-t cursor-pointer'>
                         <div className='flex items-center gap-2 justify-between' onClick={() => expand === index ? setExpand(null) : setExpand(index)}>
-                            <h2 className='text-dark-purple font-semibold text-lg'>{item.header}</h2>
+                            <h2 className='text-dark-purple font-semibold text-lg transition-all ease-in-out hover:text-light-purple'>{item.header}</h2>
                             <img src={expand === index ? minusIcon : plusIcon} className={`transition-all ease-in-out duration-300 ${expand === index ? "rotate-180" : "rotate-0"}`} alt="Plus" />
                         </div>
                         <AnimatePresence>
